@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Serif&display=swap");
+
+
+.light-mode {
+  --font-color: black;
+  --f-color : white;
+  --body-bg-color: white;
+  --bod-bg-color: #2F4F4F;
+  --place-holder: black;
+}
+.dark-mode {
+  --font-color: white;
+  --f-color: black;
+  --body-bg-color: black;
+  --bod-bg-color: #2F4F4F;
+  --place-holder: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.text-white {
+  color: var(--font-color);
+}
+.alt {
+  color: var(--f-color)
+}
+.text-black {
+  color: var(--font-color);
+}
+
+.text-gray-200 { 
+  color: var(--font-color);
+}
+
+option:checked {
+  color: var(--font-color);
+  background-color: #00897B;
+  font-weight: 600;
+}
+
+input.text-white::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--place-holder);
+  font-weight: 500;
+  opacity: 1; /* Firefox */
+}
+
+input.text-black::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: 'Gloock';
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+textarea.text-black::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: 'Gloock';
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.bg-white {
+  background-color: var(--body-bg-color);
+}
+
+.bg-black {
+  background-color: var(--body-bg-color);
+}
+
+.bg-gray-700{
+  background-color: var(--bod-bg-color);
+}
+
+.gloock{
+  font-family: 'Gloock';
+  color: white;
+}
+
+.glock{
+  font-family: 'Gloock';
+}
+
+.noto{
+  font-family: 'Noto+Serif';
+}
+
+.categories {
+  font-family: 'Gloock';
 }
